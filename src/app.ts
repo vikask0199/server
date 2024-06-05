@@ -63,6 +63,10 @@ const upload = multer({
   }
 });
 
+app.get("/", async (req: Request, res: Response) => {
+  res.send("hello working");
+})
+
 // Routes
 app.post("/upload-image", upload.single("image"), async (req: Request, res: Response) => {
   if (!req.file) {
