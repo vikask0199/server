@@ -7,6 +7,7 @@ dotenv.config({ path: ".env" });
 
 const server = http.createServer(app);
 
+const port = 5000;
 process.on("uncaughtException", (error) => {
   process.exit(1);
 });
@@ -30,7 +31,6 @@ const connectWithDatabase = async () => {
 };
 let accessDB = connectWithDatabase();
 
-const port = process.env.PORT || 5000;
 server.listen(port, () => {
   console.log(`listening on ${port}`);
 });
