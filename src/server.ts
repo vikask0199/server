@@ -15,7 +15,7 @@ process.on("uncaughtException", (error) => {
 const connectWithDatabase = async () => {
   let mongoConnection;
 
-  const mongoURI = `mongodb://vikas:Vikas%40123@localhost:27017/search_service`;
+  const mongoURI = `mongodb+srv://viku135790:XqnJSxxZCPetvFSp@keshaw.8lgow4t.mongodb.net/`;
 
   mongoConnection = await mongoose
     .connect(mongoURI)
